@@ -1,0 +1,164 @@
+==========================================================
+LANDING PAGE 2 - PORTAFOLIO DE PROYECTOS
+Juan Marturell · Realtor en Florida
+==========================================================
+
+ARCHIVO PRINCIPAL: landing-portafolio.html
+CARPETA DE IMÁGENES: images/
+
+==========================================================
+1. AGREGAR LAS FOTOS DE LOS PROYECTOS (paso obligatorio)
+==========================================================
+
+Cada proyecto necesita 8 fotos. La carpeta "images" debe
+contener los siguientes archivos con estos NOMBRES EXACTOS:
+
+CASCADES (Davenport):
+  cascades-1.jpg
+  cascades-2.jpg
+  cascades-3.jpg
+  cascades-4.jpg
+  cascades-5.jpg
+  cascades-6.jpg
+  cascades-7.jpg
+  cascades-8.jpg
+
+BRENTWOOD (Davenport):
+  brentwood-1.jpg
+  brentwood-2.jpg
+  brentwood-3.jpg
+  brentwood-4.jpg
+  brentwood-5.jpg
+  brentwood-6.jpg
+  brentwood-7.jpg
+  brentwood-8.jpg
+
+CROSSWINDS (Haines City - casas):
+  crosswinds-1.jpg
+  crosswinds-2.jpg
+  crosswinds-3.jpg
+  crosswinds-4.jpg
+  crosswinds-5.jpg
+  crosswinds-6.jpg
+  crosswinds-7.jpg
+  crosswinds-8.jpg
+
+CROSSWINDS TOWNHOMES (Haines City - townhomes):
+  crosswinds-th-1.jpg
+  crosswinds-th-2.jpg
+  crosswinds-th-3.jpg
+  crosswinds-th-4.jpg
+  crosswinds-th-5.jpg
+  crosswinds-th-6.jpg
+  crosswinds-th-7.jpg
+  crosswinds-th-8.jpg
+
+IMPORTANTE: la foto número 1 de cada proyecto será la foto
+principal que aparece en la card. Elige la mejor.
+
+CONSEJO: comprime las fotos antes de pegarlas. Cada foto
+no debería pesar más de 300-400 KB. Usa tinypng.com o
+squoosh.app (gratuitos, online, sin instalar nada).
+
+==========================================================
+2. ACTUALIZAR PRECIOS
+==========================================================
+
+Abre landing-portafolio.html con el Bloc de Notas
+(o cualquier editor de texto).
+
+Busca la palabra: PRECIO ACTUALIZABLE
+Vas a encontrar 4 resultados, uno por proyecto.
+
+Justo debajo de cada comentario verás una línea como:
+  <div class="proyecto-precio">Desde $305,990 <span>...
+
+Cambia el número $305,990 por el precio actualizado.
+Guarda y listo.
+
+También puedes actualizar la fecha de "información
+actualizada". Busca: cambiar la fecha de actualización
+y cambia el mes/año.
+
+==========================================================
+3. AGREGAR UN PROYECTO NUEVO
+==========================================================
+
+Paso 1: Abre landing-portafolio.html con el Bloc de Notas.
+
+Paso 2: Busca: PROYECTO 4: CROSSWINDS TOWNHOMES
+Encontrarás un bloque que empieza con
+   <article class="proyecto-card" ...>
+y termina con
+   </article>
+
+Paso 3: Selecciona y copia ese bloque completo.
+
+Paso 4: Pégalo justo después del </article> del proyecto 4,
+antes de la línea </div><!-- /.proyectos-grid -->
+
+Paso 5: Cambia los siguientes datos en el bloque pegado:
+
+  - data-proyecto="..." (nombre que aparece en la galería)
+  - data-fotos="..." (lista de 8 nombres de archivo separados
+    por coma. Ejemplo: nuevo-1.jpg,nuevo-2.jpg,...)
+  - src="images/..." de la foto principal
+  - .proyecto-pill (ciudad: Davenport, Haines City, etc.)
+  - .proyecto-nombre (nombre del proyecto)
+  - .proyecto-tipo (Casas / Townhomes / etc.)
+  - .proyecto-precio (precio desde)
+  - .proyecto-feature (4 datos: hab, baños, sq ft, garage)
+  - .proyecto-desc (descripción corta del proyecto)
+  - href del .proyecto-cta (mensaje de WhatsApp pre-llenado)
+
+Paso 6: Sube las 8 fotos del nuevo proyecto a la carpeta
+images con los nombres que pusiste en data-fotos.
+
+Paso 7: Guarda el HTML y actualiza la página.
+
+==========================================================
+4. CAMBIAR EL NÚMERO DE WHATSAPP
+==========================================================
+
+Si en algún momento cambias tu número de WhatsApp:
+
+Busca en el archivo HTML: 14077316247
+Reemplázalo TODAS las veces (Ctrl+H en el Bloc de Notas)
+por el nuevo número con el código de país, sin espacios
+ni caracteres especiales.
+
+Ejemplo: si tu nuevo número es +1 407 123 4567, lo escribes
+como 14071234567 (sin el + ni espacios).
+
+==========================================================
+5. CÓMO ABRIR LA LANDING
+==========================================================
+
+Doble clic en landing-portafolio.html y se abre en tu
+navegador. Las fotos solo se verán si las pusiste en
+la carpeta images con los nombres exactos.
+
+==========================================================
+6. CÓMO ENVIARLA A UN CLIENTE (PROFESIONAL)
+==========================================================
+
+Para que tu cliente la pueda abrir desde cualquier
+dispositivo, súbela a internet en lugar de mandarla
+como archivo. Recomendado:
+
+OPCIÓN GRATUITA RÁPIDA: Netlify Drop
+  1. Entra a https://app.netlify.com/drop
+  2. Arrastra la CARPETA COMPLETA "Landing Page 2"
+     (con el HTML y la subcarpeta images) al recuadro.
+  3. En 30 segundos te da un enlace tipo
+     "elegant-name-12345.netlify.app"
+  4. Ese enlace se lo mandas al cliente por WhatsApp.
+
+==========================================================
+NOTAS
+
+- No menciones al constructor en ningún ajuste de copy.
+- Si agregas una nueva ciudad, repítela en el hero también.
+- Para mantener uniformidad, todas las fotos deben ser
+  horizontales con proporción aproximada de 16:9 o 4:3.
+==========================================================
