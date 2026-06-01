@@ -296,7 +296,7 @@
         <!-- Se generan dinámicamente -->
       </div>
       <label class="filtro-toggle">
-        <input type="checkbox" id="solo-disponibles" checked>
+        <input type="checkbox" id="solo-disponibles">
         <span class="switch"></span>
         <span>Mostrar solo disponibles</span>
       </label>
@@ -460,7 +460,7 @@
     },
     {
       codigo: "JM-006",
-      estado: "disponible",
+      estado: "rentada",
       ciudad: "Haines City",
       zip: "33844",
       precio: 2400,
@@ -578,7 +578,7 @@
   // ==============================================
   const WHATSAPP_NUMBER = "14077316247";
   let filtroCiudad = "todas";
-  let soloDisponibles = true;
+  let soloDisponibles = false;
   let fotosActuales = [];
   let indiceActual = 0;
   let proyectoActual = "";
