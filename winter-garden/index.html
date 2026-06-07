@@ -1,0 +1,523 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<meta name="description" content="Comunidades de nueva construcción en Winter Garden, Florida — Waterleigh, Avalon Woods, Silverleaf Oaks y Harvest at Ovation. Inventario activo disponible para visitar hoy." />
+<title>Casas Nuevas en Winter Garden · Comunidades Seleccionadas — Juan Marturell, Realtor</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --azul: #004AAD;
+    --azul-oscuro: #003580;
+    --azul-claro: #E6EFFB;
+    --gris: #9D9D9D;
+    --gris-claro: #F7F8FA;
+    --gris-medio: #E5E7EB;
+    --texto: #1A2233;
+    --texto-suave: #5A6377;
+    --blanco: #FFFFFF;
+    --sombra-suave: 0 6px 28px rgba(0, 74, 173, 0.08);
+    --sombra-card: 0 12px 40px rgba(0, 74, 173, 0.12);
+    --radio: 14px;
+  }
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  html { scroll-behavior: smooth; }
+  body {
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+    color: var(--texto);
+    background: var(--blanco);
+    line-height: 1.6;
+    font-size: 16px;
+    -webkit-font-smoothing: antialiased;
+  }
+  img { max-width: 100%; display: block; }
+  .contenedor { max-width: 1180px; margin: 0 auto; padding: 0 24px; }
+
+  /* HEADER */
+  header { position: sticky; top: 0; z-index: 100; background: rgba(255,255,255,0.96); backdrop-filter: blur(10px); border-bottom: 1px solid var(--gris-medio); padding: 16px 0; }
+  .header-inner { display: flex; align-items: center; justify-content: flex-start; padding: 0 24px; }
+  .logo-juan { height: 95px; width: auto; max-width: none; display: block; }
+
+  /* HERO */
+  .hero { padding: 60px 0 90px; background: linear-gradient(180deg, #fbfcfe 0%, #ffffff 100%); position: relative; overflow: hidden; }
+  .hero::before { content: ''; position: absolute; top: -200px; right: -200px; width: 500px; height: 500px; background: radial-gradient(circle, rgba(0,74,173,0.06) 0%, rgba(0,74,173,0) 70%); border-radius: 50%; pointer-events: none; }
+  .hero-inner { max-width: 820px; text-align: center; margin: 0 auto; position: relative; }
+  .eyebrow { display: inline-flex; align-items: center; gap: 8px; background: rgba(0,74,173,0.08); color: var(--azul); padding: 7px 16px; border-radius: 50px; font-weight: 600; font-size: 12.5px; letter-spacing: 0.5px; margin-bottom: 22px; text-transform: uppercase; }
+  .eyebrow::before { content: ''; width: 7px; height: 7px; background: var(--azul); border-radius: 50%; }
+  .hero h1 { font-size: clamp(2rem, 4.5vw, 3.2rem); font-weight: 800; line-height: 1.12; color: var(--texto); margin-bottom: 22px; letter-spacing: -0.02em; }
+  .hero h1 span { color: var(--azul); }
+  .hero-sub { font-size: 1.1rem; color: var(--texto-suave); margin-bottom: 36px; line-height: 1.65; max-width: 640px; margin-left: auto; margin-right: auto; }
+  .cta-botones { display: flex; gap: 14px; justify-content: center; flex-wrap: wrap; }
+  .btn-primario { display: inline-flex; align-items: center; gap: 10px; background: var(--azul); color: var(--blanco); padding: 16px 30px; border-radius: 50px; text-decoration: none; font-weight: 600; font-size: 1rem; transition: all 0.25s ease; box-shadow: 0 6px 20px rgba(0,74,173,0.22); }
+  .btn-primario:hover { background: var(--azul-oscuro); transform: translateY(-2px); }
+  .btn-wa { background: #25D366; box-shadow: 0 6px 20px rgba(37,211,102,0.28); }
+  .btn-wa:hover { background: #1EA952; }
+  .btn-wa svg { width: 20px; height: 20px; fill: currentColor; }
+  .btn-secundario { display: inline-flex; align-items: center; gap: 8px; background: transparent; color: var(--texto-suave); padding: 14px 22px; border-radius: 50px; text-decoration: none; font-weight: 500; font-size: 0.95rem; border: 1px solid var(--gris-medio); transition: all 0.25s ease; }
+  .btn-secundario:hover { border-color: var(--azul); color: var(--azul); background: rgba(0,74,173,0.04); }
+
+  .last-update { display: inline-block; margin-top: 22px; font-size: 0.82rem; color: var(--texto-suave); background: rgba(0,74,173,0.04); padding: 6px 14px; border-radius: 50px; }
+
+  /* BLOQUE AZUL CONFIANZA */
+  .confianza { background: var(--azul); color: var(--blanco); padding: 60px 0; }
+  .confianza-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 0; text-align: center; }
+  .confianza-item { padding: 8px 32px; position: relative; }
+  .confianza-item + .confianza-item::before { content: ''; position: absolute; left: 0; top: 12%; bottom: 12%; width: 1px; background: rgba(255,255,255,0.18); }
+  .confianza-num { font-size: clamp(2.2rem, 4.5vw, 3.2rem); font-weight: 800; line-height: 1; margin-bottom: 12px; letter-spacing: -0.02em; }
+  .confianza-num small { font-size: 0.4em; font-weight: 600; vertical-align: middle; margin-left: 6px; opacity: 0.85; }
+  .confianza-titulo { font-size: 1rem; font-weight: 600; margin-bottom: 6px; }
+  .confianza-desc { font-size: 0.9rem; color: rgba(255,255,255,0.78); line-height: 1.55; }
+
+  /* PROYECTOS */
+  .proyectos { padding: 90px 0; background: var(--gris-claro); }
+  .sec-encabezado { text-align: center; margin-bottom: 50px; max-width: 720px; margin-left: auto; margin-right: auto; }
+  .sec-titulo { font-size: clamp(1.7rem, 3vw, 2.4rem); font-weight: 800; color: var(--texto); line-height: 1.2; letter-spacing: -0.01em; margin-bottom: 14px; }
+  .sec-sub { font-size: 1.05rem; color: var(--texto-suave); }
+
+  .proyectos-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 28px; }
+  .proyecto-card { background: var(--blanco); border-radius: 18px; overflow: hidden; box-shadow: var(--sombra-suave); transition: all 0.3s ease; display: flex; flex-direction: column; }
+  .proyecto-card:hover { transform: translateY(-4px); box-shadow: var(--sombra-card); }
+  .proyecto-foto { aspect-ratio: 16/10; background: linear-gradient(135deg, #eef2f8 0%, #dde5f0 100%); position: relative; overflow: hidden; }
+  .proyecto-foto img { width: 100%; height: 100%; object-fit: cover; transition: transform 0.5s ease; }
+  .proyecto-card:hover .proyecto-foto img { transform: scale(1.04); }
+  .proyecto-foto-placeholder { position: absolute; inset: 0; display: flex; align-items: center; justify-content: center; color: var(--texto-suave); font-weight: 600; text-align: center; padding: 20px; font-size: 0.92rem; }
+  .proyecto-pill { position: absolute; top: 16px; left: 16px; background: var(--blanco); padding: 6px 14px; border-radius: 50px; font-size: 0.78rem; font-weight: 700; color: var(--azul); letter-spacing: 0.5px; box-shadow: 0 4px 12px rgba(0,0,0,0.08); }
+  .proyecto-galeria-btn { position: absolute; bottom: 16px; right: 16px; background: rgba(0,0,0,0.7); color: var(--blanco); padding: 8px 14px; border-radius: 50px; font-size: 0.82rem; font-weight: 600; cursor: pointer; backdrop-filter: blur(8px); border: none; display: inline-flex; align-items: center; gap: 6px; transition: background 0.25s; }
+  .proyecto-galeria-btn:hover { background: var(--azul); }
+  .proyecto-galeria-btn svg { width: 14px; height: 14px; fill: currentColor; }
+
+  .proyecto-body { padding: 26px 26px 28px; display: flex; flex-direction: column; flex-grow: 1; }
+  .proyecto-nombre { font-size: 1.4rem; font-weight: 800; color: var(--texto); margin-bottom: 4px; letter-spacing: -0.01em; }
+  .proyecto-tipo { font-size: 0.88rem; color: var(--azul); font-weight: 600; margin-bottom: 14px; text-transform: uppercase; letter-spacing: 0.5px; }
+  .proyecto-precio { font-size: 1.1rem; color: var(--texto); font-weight: 700; margin-bottom: 16px; }
+  .proyecto-precio span { color: var(--texto-suave); font-weight: 500; font-size: 0.92rem; }
+  .proyecto-features { display: flex; gap: 18px; flex-wrap: wrap; padding: 16px 0; border-top: 1px solid var(--gris-medio); border-bottom: 1px solid var(--gris-medio); margin-bottom: 18px; }
+  .proyecto-feature { display: flex; align-items: center; gap: 6px; font-size: 0.88rem; color: var(--texto-suave); font-weight: 500; }
+  .proyecto-feature strong { color: var(--texto); font-weight: 700; }
+  .proyecto-desc { font-size: 0.95rem; color: var(--texto-suave); line-height: 1.6; margin-bottom: 22px; flex-grow: 1; }
+  .proyecto-cta { display: inline-flex; align-items: center; justify-content: center; gap: 8px; background: var(--azul); color: var(--blanco); padding: 13px 22px; border-radius: 50px; text-decoration: none; font-weight: 600; font-size: 0.95rem; transition: all 0.25s ease; }
+  .proyecto-cta:hover { background: var(--azul-oscuro); }
+  .proyecto-cta svg { width: 16px; height: 16px; fill: currentColor; }
+
+  /* SOBRE JUAN COMPACTO */
+  .sobre { padding: 80px 0; background: var(--blanco); }
+  .sobre-inner { max-width: 720px; margin: 0 auto; text-align: center; }
+  .sobre h2 { font-size: clamp(1.6rem, 2.8vw, 2.1rem); font-weight: 800; color: var(--texto); margin-bottom: 16px; line-height: 1.25; }
+  .sobre p { font-size: 1.02rem; color: var(--texto-suave); line-height: 1.75; }
+
+  /* CTA FINAL */
+  .cta-final { padding: 90px 0; background: linear-gradient(135deg, #fbfcfe 0%, #f0f5fc 100%); position: relative; overflow: hidden; }
+  .cta-final::before { content: ''; position: absolute; top: -150px; left: -150px; width: 400px; height: 400px; background: radial-gradient(circle, rgba(0,74,173,0.08) 0%, transparent 70%); border-radius: 50%; }
+  .cta-final-inner { max-width: 720px; margin: 0 auto; text-align: center; position: relative; }
+  .cta-final h2 { font-size: clamp(1.7rem, 3vw, 2.3rem); font-weight: 800; margin-bottom: 16px; line-height: 1.2; color: var(--texto); }
+  .cta-final p { color: var(--texto-suave); font-size: 1.05rem; margin-bottom: 32px; max-width: 540px; margin-left: auto; margin-right: auto; }
+
+  /* WHATSAPP FLOTANTE */
+  .wa-flotante { position: fixed; bottom: 22px; right: 22px; width: 58px; height: 58px; background: #25D366; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 8px 24px rgba(37,211,102,0.4); z-index: 99; text-decoration: none; transition: transform 0.25s ease; }
+  .wa-flotante:hover { transform: scale(1.08); }
+  .wa-flotante svg { width: 30px; height: 30px; fill: var(--blanco); }
+
+  /* MODAL GALERÍA */
+  .modal-overlay { display: none; position: fixed; inset: 0; background: rgba(15, 23, 42, 0.92); z-index: 1000; backdrop-filter: blur(8px); animation: fadeIn 0.3s ease; }
+  .modal-overlay.activo { display: flex; align-items: center; justify-content: center; }
+  @keyframes fadeIn { from { opacity: 0; } to { opacity: 1; } }
+  .modal-contenido { position: relative; width: 92%; max-width: 1100px; max-height: 92vh; display: flex; flex-direction: column; }
+  .modal-titulo { color: var(--blanco); font-size: 1.4rem; font-weight: 700; margin-bottom: 18px; text-align: center; }
+  .modal-titulo span { color: rgba(255,255,255,0.6); font-weight: 500; font-size: 1rem; }
+  .modal-foto-wrap { position: relative; flex-grow: 1; min-height: 0; background: rgba(0,0,0,0.4); border-radius: 14px; overflow: hidden; display: flex; align-items: center; justify-content: center; }
+  .modal-foto { max-width: 100%; max-height: 65vh; object-fit: contain; display: block; }
+  .modal-flecha { position: absolute; top: 50%; transform: translateY(-50%); width: 50px; height: 50px; background: rgba(255,255,255,0.95); border: none; border-radius: 50%; cursor: pointer; display: flex; align-items: center; justify-content: center; box-shadow: 0 4px 20px rgba(0,0,0,0.3); transition: transform 0.2s; }
+  .modal-flecha:hover { transform: translateY(-50%) scale(1.08); background: var(--blanco); }
+  .modal-flecha-prev { left: 16px; }
+  .modal-flecha-next { right: 16px; }
+  .modal-flecha svg { width: 22px; height: 22px; fill: var(--azul); }
+  .modal-cerrar { position: absolute; top: -50px; right: 0; width: 40px; height: 40px; background: rgba(255,255,255,0.15); border: none; border-radius: 50%; color: var(--blanco); cursor: pointer; display: flex; align-items: center; justify-content: center; font-size: 1.4rem; transition: background 0.2s; }
+  .modal-cerrar:hover { background: rgba(255,255,255,0.25); }
+  .modal-counter { color: rgba(255,255,255,0.7); font-size: 0.88rem; text-align: center; margin-top: 14px; font-weight: 500; }
+
+  /* FOOTER */
+  footer { background: #0F172A; color: rgba(255,255,255,0.72); padding: 56px 0 28px; }
+  .footer-grid { display: grid; grid-template-columns: 1.5fr 1fr 1fr; gap: 50px; margin-bottom: 36px; }
+  .footer-col-brand { display: flex; flex-direction: column; align-items: flex-start; gap: 18px; }
+  .footer-logo { height: 80px; width: auto; max-width: 100%; display: block; margin: 0; object-fit: contain; }
+  .footer-col p { font-size: 0.92rem; line-height: 1.7; margin-bottom: 12px; max-width: 320px; }
+  footer h4 { color: var(--blanco); font-size: 0.95rem; font-weight: 700; margin-bottom: 14px; letter-spacing: 0.3px; }
+  .footer-col a { color: rgba(255,255,255,0.72); text-decoration: none; display: block; padding: 4px 0; font-size: 0.92rem; transition: color 0.2s; }
+  .footer-col a:hover { color: var(--blanco); }
+  .footer-redes { display: flex; gap: 12px; margin-top: 16px; }
+  .footer-redes a { width: 38px; height: 38px; background: rgba(255,255,255,0.08); border-radius: 50%; display: flex; align-items: center; justify-content: center; padding: 0; transition: all 0.25s; }
+  .footer-redes a:hover { background: var(--azul); }
+  .footer-redes svg { width: 18px; height: 18px; fill: var(--blanco); }
+
+  .institucional { background: var(--blanco); border-radius: 14px; padding: 26px 32px; margin-bottom: 28px; }
+  .institucional-inner { display: flex; align-items: center; justify-content: center; gap: 48px; flex-wrap: wrap; }
+  .institucional img { width: 95px; height: auto; opacity: 0.85; transition: opacity 0.25s; object-fit: contain; }
+  .institucional img:hover { opacity: 1; }
+  .institucional-broker { width: 150px !important; }
+  .institucional-eho { width: 90px !important; }
+
+  .copyright { font-size: 0.78rem; color: rgba(255,255,255,0.45); text-align: center; line-height: 1.7; }
+
+  /* RESPONSIVE */
+  @media (max-width: 900px) {
+    .hero { padding: 50px 0 70px; }
+    .confianza-grid { grid-template-columns: 1fr; gap: 28px; }
+    .confianza-item + .confianza-item::before { display: none; }
+    .confianza-item + .confianza-item { border-top: 1px solid rgba(255,255,255,0.18); padding-top: 28px; }
+    .proyectos { padding: 64px 0; }
+    .proyectos-grid { grid-template-columns: 1fr; gap: 22px; }
+    .footer-grid { grid-template-columns: 1fr; gap: 32px; }
+    .institucional { padding: 20px 18px; }
+    .institucional-inner { gap: 24px; }
+    .institucional img { width: 78px; }
+    .institucional-broker { width: 120px !important; }
+    .institucional-eho { width: 70px !important; }
+    header { padding: 14px 0; }
+    .logo-juan { height: 70px; }
+    .footer-logo { height: 64px; }
+    .modal-flecha { width: 42px; height: 42px; }
+    .modal-flecha-prev { left: 8px; }
+    .modal-flecha-next { right: 8px; }
+  }
+  @media (max-width: 600px) {
+    .cta-botones { flex-direction: column; align-items: stretch; }
+    .btn-primario, .btn-secundario { justify-content: center; }
+    .modal-foto { max-height: 55vh; }
+  }
+</style>
+</head>
+<body>
+
+<!-- HEADER -->
+<header>
+  <div class="contenedor header-inner">
+    <img src="../images/1Logo-juan1080.png" alt="Juan Marturell · Realtor" class="logo-juan" />
+  </div>
+</header>
+
+<!-- HERO -->
+<section class="hero">
+  <div class="contenedor hero-inner">
+    <div class="eyebrow">Winter Garden · Horizon West · Florida</div>
+    <h1>Comunidades de nueva construcción en <span>Winter Garden</span></h1>
+    <p class="hero-sub">Una selección de comunidades de nueva construcción en Winter Garden con inventario activo disponible para visitar hoy.</p>
+    <div class="cta-botones">
+      <a href="https://wa.me/14077316247?text=Hola%20Juan,%20quiero%20conocer%20más%20sobre%20las%20comunidades%20nuevas%20en%20Winter%20Garden." class="btn-primario btn-wa" target="_blank" rel="noopener">
+        <svg viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+        Hablar por WhatsApp
+      </a>
+      <a href="#proyectos" class="btn-secundario">Ver comunidades</a>
+    </div>
+    <div class="last-update">Información actualizada · Junio 2026</div>
+  </div>
+</section>
+
+<!-- BLOQUE AZUL CONFIANZA -->
+<section class="confianza">
+  <div class="contenedor">
+    <div class="confianza-grid">
+      <div class="confianza-item">
+        <div class="confianza-num">6<small>+</small></div>
+        <div class="confianza-titulo">Años de experiencia</div>
+        <div class="confianza-desc">Guiando decisiones inmobiliarias en Florida.</div>
+      </div>
+      <div class="confianza-item">
+        <div class="confianza-num">100<small>%</small></div>
+        <div class="confianza-titulo">Asesoría Integral</div>
+        <div class="confianza-desc">Acompañamiento claro en cada paso del proceso.</div>
+      </div>
+      <div class="confianza-item">
+        <div class="confianza-num">4</div>
+        <div class="confianza-titulo">Comunidades exclusivas</div>
+        <div class="confianza-desc">Una selección de comunidades en Winter Garden para quienes buscan calidad de vida, ubicación y crecimiento a largo plazo.</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- SECCIÓN PROYECTOS -->
+<section id="proyectos" class="proyectos">
+  <div class="contenedor">
+    <div class="sec-encabezado">
+      <div class="eyebrow" style="margin: 0 auto 22px;">Winter Garden</div>
+      <h2 class="sec-titulo">Comunidades destacadas</h2>
+      <p class="sec-sub">Una selección de proyectos de nueva construcción en Winter Garden y Horizon West, con inventario activo y disponibilidad para visitar.</p>
+    </div>
+
+    <div class="proyectos-grid">
+
+      <!-- =========== COMUNIDAD 1: WATERLEIGH (DR HORTON) =========== -->
+      <article class="proyecto-card"
+        data-proyecto="Waterleigh · Winter Garden"
+        data-fotos="IMAGENES/Waterleigh/Waterleigh-1.jpg,IMAGENES/Waterleigh/Waterleigh-2.jpg,IMAGENES/Waterleigh/Waterleigh-3.jpg,IMAGENES/Waterleigh/Waterleigh-4.jpg,IMAGENES/Waterleigh/Waterleigh-5.jpg,IMAGENES/Waterleigh/Waterleigh-6.jpg,IMAGENES/Waterleigh/Waterleigh-7.jpg,IMAGENES/Waterleigh/Waterleigh-8.jpg,IMAGENES/Waterleigh/Waterleigh-9.jpg,IMAGENES/Waterleigh/Waterleigh-10.jpg">
+        <div class="proyecto-foto">
+          <img src="IMAGENES/Waterleigh/Waterleigh-1.jpg" alt="Waterleigh — Winter Garden" onerror="this.style.display='none';this.nextElementSibling.style.display='flex';" />
+          <div class="proyecto-foto-placeholder" style="display:none;">[ Waterleigh — Winter Garden ]</div>
+          <div class="proyecto-pill">Winter Garden</div>
+          <button class="proyecto-galeria-btn" onclick="abrirGaleria(this)">
+            <svg viewBox="0 0 24 24"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4M7 10l5 5 5-5M12 15V3"/></svg>
+            Ver galería (10)
+          </button>
+        </div>
+        <div class="proyecto-body">
+          <div class="proyecto-nombre">Waterleigh</div>
+          <div class="proyecto-tipo">Casas unifamiliares · DR Horton</div>
+          <div class="proyecto-precio">Desde $440,000 <span>· Precios sujetos a Disponibilidad</span></div>
+          <div class="proyecto-features">
+            <div class="proyecto-feature"><strong>3-4</strong> hab.</div>
+            <div class="proyecto-feature"><strong>2-3</strong> baños</div>
+            <div class="proyecto-feature"><strong>1,671–2,838</strong> sq ft</div>
+            <div class="proyecto-feature"><strong>2</strong> garage</div>
+          </div>
+          <p class="proyecto-desc">Comunidad con club house, piscina resort, parques y zonas de juegos. Diseños modernos con cocinas de quartz, electrodomésticos en acero y tecnología smart home. Ubicada en Horizon West con acceso a SR-429 y a toda la zona comercial de Winter Garden.</p>
+          <a href="https://wa.me/14077316247?text=Hola%20Juan,%20me%20interesa%20Waterleigh%20en%20Winter%20Garden." class="proyecto-cta" target="_blank" rel="noopener">
+            <svg viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+            Más información
+          </a>
+        </div>
+      </article>
+
+      <!-- =========== COMUNIDAD 2: AVALON WOODS (DREAM FINDERS) =========== -->
+      <article class="proyecto-card"
+        data-proyecto="Avalon Woods · Winter Garden"
+        data-fotos="IMAGENES/Avalon Woods/Avalon Wood-1.jpg,IMAGENES/Avalon Woods/Avalon Wood-2.jpg,IMAGENES/Avalon Woods/Avalon Wood-3.jpg,IMAGENES/Avalon Woods/Avalon Wood-4.jpg,IMAGENES/Avalon Woods/Avalon Wood-5.jpg,IMAGENES/Avalon Woods/Avalon Wood-6.jpg,IMAGENES/Avalon Woods/Avalon Wood-7.jpg,IMAGENES/Avalon Woods/Avalon Wood-8.jpg">
+        <div class="proyecto-foto">
+          <img src="IMAGENES/Avalon Woods/Avalon Wood-1.jpg" alt="Avalon Woods — Winter Garden" onerror="this.style.display='none';this.nextElementSibling.style.display='flex';" />
+          <div class="proyecto-foto-placeholder" style="display:none;">[ Avalon Woods — Winter Garden ]</div>
+          <div class="proyecto-pill">Horizon West</div>
+          <button class="proyecto-galeria-btn" onclick="abrirGaleria(this)">
+            <svg viewBox="0 0 24 24"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4M7 10l5 5 5-5M12 15V3"/></svg>
+            Ver galería (8)
+          </button>
+        </div>
+        <div class="proyecto-body">
+          <div class="proyecto-nombre">Avalon Woods</div>
+          <div class="proyecto-tipo">Casas unifamiliares · Dream Finders Homes</div>
+          <div class="proyecto-precio">Desde $550,000 <span>· Precios sujetos a Disponibilidad</span></div>
+          <div class="proyecto-features">
+            <div class="proyecto-feature"><strong>3-4</strong> hab.</div>
+            <div class="proyecto-feature"><strong>2-3.5</strong> baños</div>
+            <div class="proyecto-feature"><strong>1,772–4,024</strong> sq ft</div>
+            <div class="proyecto-feature"><strong>2</strong> garage</div>
+          </div>
+          <p class="proyecto-desc">183 homesites en Horizon West con lotes de 40', 50' y 60'. Área de juegos, espacios verdes y a 5 minutos del Hamlin Town Center. Comunidad tranquila con excelente ubicación para quienes buscan calidad de vida y crecimiento a largo plazo.</p>
+          <a href="https://wa.me/14077316247?text=Hola%20Juan,%20me%20interesa%20Avalon%20Woods%20en%20Winter%20Garden." class="proyecto-cta" target="_blank" rel="noopener">
+            <svg viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+            Más información
+          </a>
+        </div>
+      </article>
+
+      <!-- =========== COMUNIDAD 3: SILVERLEAF OAKS (PULTE) =========== -->
+      <article class="proyecto-card"
+        data-proyecto="Silverleaf Oaks · Winter Garden"
+        data-fotos="IMAGENES/Silverleaf Oaks/Silverleaf-1.jpg,IMAGENES/Silverleaf Oaks/Silverleaf-2.jpg,IMAGENES/Silverleaf Oaks/Silverleaf-3.jpg,IMAGENES/Silverleaf Oaks/Silverleaf-4.jpg,IMAGENES/Silverleaf Oaks/Silverleaf-5.jpg,IMAGENES/Silverleaf Oaks/Silverleaf-6.jpg,IMAGENES/Silverleaf Oaks/Silverleaf-7.jpg,IMAGENES/Silverleaf Oaks/Silverleaf-8.jpg">
+        <div class="proyecto-foto">
+          <img src="IMAGENES/Silverleaf Oaks/Silverleaf-1.jpg" alt="Silverleaf Oaks — Winter Garden" onerror="this.style.display='none';this.nextElementSibling.style.display='flex';" />
+          <div class="proyecto-foto-placeholder" style="display:none;">[ Silverleaf Oaks — Winter Garden ]</div>
+          <div class="proyecto-pill">Winter Garden</div>
+          <button class="proyecto-galeria-btn" onclick="abrirGaleria(this)">
+            <svg viewBox="0 0 24 24"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4M7 10l5 5 5-5M12 15V3"/></svg>
+            Ver galería (8)
+          </button>
+        </div>
+        <div class="proyecto-body">
+          <div class="proyecto-nombre">Silverleaf Oaks</div>
+          <div class="proyecto-tipo">Casas unifamiliares · Pulte Homes</div>
+          <div class="proyecto-precio">Desde $480,000 <span>· Precios sujetos a Disponibilidad</span></div>
+          <div class="proyecto-features">
+            <div class="proyecto-feature"><strong>3-4</strong> hab.</div>
+            <div class="proyecto-feature"><strong>2-3</strong> baños</div>
+            <div class="proyecto-feature"><strong>1,867–2,777</strong> sq ft</div>
+            <div class="proyecto-feature"><strong>2</strong> garage</div>
+          </div>
+          <p class="proyecto-desc">Comunidad residencial de Pulte Homes en Winter Garden con diseños funcionales y acabados de calidad. Cocinas modernas, zonas de convivencia y ubicación estratégica con acceso directo a SR-429 y a los mejores centros comerciales de la zona oeste de Orlando.</p>
+          <a href="https://wa.me/14077316247?text=Hola%20Juan,%20me%20interesa%20Silverleaf%20Oaks%20en%20Winter%20Garden." class="proyecto-cta" target="_blank" rel="noopener">
+            <svg viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+            Más información
+          </a>
+        </div>
+      </article>
+
+      <!-- =========== COMUNIDAD 4: HARVEST AT OVATION (TAYLOR MORRISON) =========== -->
+      <article class="proyecto-card"
+        data-proyecto="Harvest at Ovation · Winter Garden"
+        data-fotos="IMAGENES/Harvest at Ovation/Harvest-at-Ovation-1.jpg,IMAGENES/Harvest at Ovation/Harvest-at-Ovation-2.jpg,IMAGENES/Harvest at Ovation/Harvest-at-Ovation-3.jpg,IMAGENES/Harvest at Ovation/Harvest-at-Ovation-4.jpg,IMAGENES/Harvest at Ovation/Harvest-at-Ovation-5.jpg,IMAGENES/Harvest at Ovation/Harvest-at-Ovation-6.jpg,IMAGENES/Harvest at Ovation/Harvest-at-Ovation-7.jpg,IMAGENES/Harvest at Ovation/Harvest-at-Ovation-8.jpg,IMAGENES/Harvest at Ovation/Harvest-at-Ovation-9.jpg,IMAGENES/Harvest at Ovation/Harvest-at-Ovation-10.jpg,IMAGENES/Harvest at Ovation/Harvest-at-Ovation-11.jpg,IMAGENES/Harvest at Ovation/Harvest-at-Ovation-12.jpg,IMAGENES/Harvest at Ovation/Harvest-at-Ovation-13.jpg,IMAGENES/Harvest at Ovation/Harvest-at-Ovation-14.jpg">
+        <div class="proyecto-foto">
+          <img src="IMAGENES/Harvest at Ovation/Harvest-at-Ovation-1.jpg" alt="Harvest at Ovation — Winter Garden" onerror="this.style.display='none';this.nextElementSibling.style.display='flex';" />
+          <div class="proyecto-foto-placeholder" style="display:none;">[ Harvest at Ovation — Winter Garden ]</div>
+          <div class="proyecto-pill">Horizon West</div>
+          <button class="proyecto-galeria-btn" onclick="abrirGaleria(this)">
+            <svg viewBox="0 0 24 24"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4M7 10l5 5 5-5M12 15V3"/></svg>
+            Ver galería (14)
+          </button>
+        </div>
+        <div class="proyecto-body">
+          <div class="proyecto-nombre">Harvest at Ovation</div>
+          <div class="proyecto-tipo">Casas unifamiliares · Taylor Morrison</div>
+          <div class="proyecto-precio">Desde $500,000 <span>· Precios sujetos a Disponibilidad</span></div>
+          <div class="proyecto-features">
+            <div class="proyecto-feature"><strong>3-4</strong> hab.</div>
+            <div class="proyecto-feature"><strong>2-3</strong> baños</div>
+            <div class="proyecto-feature"><strong>1,900–3,200</strong> sq ft</div>
+            <div class="proyecto-feature"><strong>2</strong> garage</div>
+          </div>
+          <p class="proyecto-desc">Comunidad de Taylor Morrison en Horizon West, diseñada para familias que buscan espacios amplios y un entorno natural. Club house, piscina, áreas verdes y fácil acceso a las mejores escuelas y centros comerciales de Winter Garden.</p>
+          <a href="https://wa.me/14077316247?text=Hola%20Juan,%20me%20interesa%20Harvest%20at%20Ovation%20en%20Winter%20Garden." class="proyecto-cta" target="_blank" rel="noopener">
+            <svg viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+            Más información
+          </a>
+        </div>
+      </article>
+
+    </div><!-- /.proyectos-grid -->
+  </div>
+</section>
+
+<!-- SOBRE JUAN COMPACTO -->
+<section class="sobre">
+  <div class="contenedor sobre-inner">
+    <div class="eyebrow" style="margin: 0 auto 22px;">Sobre Juan</div>
+    <h2>Asesoría Profesional</h2>
+  </div>
+</section>
+
+<!-- CTA FINAL -->
+<section class="cta-final">
+  <div class="contenedor">
+    <div class="cta-final-inner">
+      <div class="eyebrow" style="margin: 0 auto 22px;">Da el siguiente paso</div>
+      <h2>Cuéntame qué buscas y te oriento</h2>
+      <p>Cada comunidad tiene perfiles distintos según tu objetivo. Conversemos por WhatsApp y te ayudo a evaluar la mejor opción para ti en Winter Garden.</p>
+      <div class="cta-botones">
+        <a href="https://wa.me/14077316247?text=Hola%20Juan,%20quiero%20conocer%20más%20sobre%20las%20comunidades%20nuevas%20en%20Winter%20Garden." class="btn-primario btn-wa" target="_blank" rel="noopener">
+          <svg viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+          Hablar por WhatsApp
+        </a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- WHATSAPP FLOTANTE -->
+<a href="https://wa.me/14077316247?text=Hola%20Juan,%20vengo%20de%20tu%20landing%20de%20Winter%20Garden." class="wa-flotante" aria-label="Contactar por WhatsApp" target="_blank" rel="noopener">
+  <svg viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+</a>
+
+<!-- MODAL GALERÍA -->
+<div class="modal-overlay" id="modal" onclick="cerrarModalSiFuera(event)">
+  <div class="modal-contenido">
+    <button class="modal-cerrar" onclick="cerrarModal()" aria-label="Cerrar">×</button>
+    <div class="modal-titulo" id="modal-titulo">Comunidad <span>· Galería</span></div>
+    <div class="modal-foto-wrap">
+      <button class="modal-flecha modal-flecha-prev" onclick="cambiarFoto(-1)" aria-label="Anterior">
+        <svg viewBox="0 0 24 24"><path d="M15 18l-6-6 6-6"/></svg>
+      </button>
+      <img class="modal-foto" id="modal-foto" src="" alt="" />
+      <button class="modal-flecha modal-flecha-next" onclick="cambiarFoto(1)" aria-label="Siguiente">
+        <svg viewBox="0 0 24 24"><path d="M9 18l6-6-6-6"/></svg>
+      </button>
+    </div>
+    <div class="modal-counter" id="modal-counter">1 / 8</div>
+  </div>
+</div>
+
+<!-- FOOTER -->
+<footer>
+  <div class="contenedor">
+    <div class="footer-grid">
+      <div class="footer-col footer-col-brand">
+        <img src="../images/2logo-juan1080.png" alt="Juan Marturell · Realtor" class="footer-logo" />
+        <p>Realtor licenciado en Florida especializado en propiedades de inversión y nueva construcción para clientes hispanos e inversionistas latinoamericanos.</p>
+        <div class="footer-redes">
+          <a href="https://instagram.com/realtorjuanmarturell" target="_blank" rel="noopener" aria-label="Instagram">
+            <svg viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg>
+          </a>
+          <a href="https://tiktok.com/@realtorjuanmarturell" target="_blank" rel="noopener" aria-label="TikTok">
+            <svg viewBox="0 0 24 24"><path d="M19.59 6.69a4.83 4.83 0 0 1-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 0 1-5.2 1.74 2.89 2.89 0 0 1 2.31-4.64 2.93 2.93 0 0 1 .88.13V9.4a6.84 6.84 0 0 0-1-.05A6.33 6.33 0 0 0 5.8 20.1a6.34 6.34 0 0 0 10.86-4.43v-7a8.16 8.16 0 0 0 4.77 1.52v-3.4a4.85 4.85 0 0 1-1.84-.1z"/></svg>
+          </a>
+        </div>
+      </div>
+      <div class="footer-col">
+        <h4>Contacto</h4>
+        <p>+1 (407) 731 6247<br/>4113 Hunter's Park Ln<br/>Orlando, FL 32837</p>
+        <a href="https://marturellrealtor.com" target="_blank">marturellrealtor.com</a>
+      </div>
+      <div class="footer-col">
+        <h4>Sígueme</h4>
+        <a href="https://instagram.com/realtorjuanmarturell" target="_blank">Instagram @realtorjuanmarturell</a>
+        <a href="https://tiktok.com/@realtorjuanmarturell" target="_blank">TikTok @realtorjuanmarturell</a>
+      </div>
+    </div>
+
+    <div class="institucional">
+      <div class="institucional-inner">
+        <img src="../images/Logo-Broker.png" alt="Agent Trust Realty" class="institucional-broker" />
+        <img src="../images/Logo-OSCAR.png" alt="Oscar" />
+        <img src="../images/Logo-Floridarealtor.png" alt="Florida Realtors" />
+        <img src="../images/Logo-EstellarMLS.png" alt="Stellar MLS" />
+        <img src="../images/Logo-EHO.png" alt="Equal Housing Opportunity" class="institucional-eho" />
+      </div>
+    </div>
+
+    <p class="copyright">
+      &copy; 2026 Juan Marturell · Realtor en Florida · Agent Trust Realty Corp · Lic. SL3466778<br/>
+      La información presentada en esta página es referencial y no constituye asesoría legal, fiscal o financiera. Precios y disponibilidad sujetos a cambio sin previo aviso.
+    </p>
+  </div>
+</footer>
+
+<script>
+  // GALERÍA MODAL
+  let fotosActuales = [];
+  let indiceActual = 0;
+  let proyectoActual = '';
+
+  function abrirGaleria(boton) {
+    const card = boton.closest('.proyecto-card');
+    proyectoActual = card.dataset.proyecto || 'Comunidad';
+    fotosActuales = (card.dataset.fotos || '').split(',').map(f => f.trim()).filter(Boolean);
+    if (fotosActuales.length === 0) return;
+    indiceActual = 0;
+    actualizarFoto();
+    document.getElementById('modal').classList.add('activo');
+    document.body.style.overflow = 'hidden';
+  }
+
+  function actualizarFoto() {
+    const foto = document.getElementById('modal-foto');
+    const titulo = document.getElementById('modal-titulo');
+    const counter = document.getElementById('modal-counter');
+    foto.src = fotosActuales[indiceActual];
+    foto.alt = proyectoActual + ' — Foto ' + (indiceActual + 1);
+    titulo.innerHTML = proyectoActual + ' <span>· Galería</span>';
+    counter.textContent = (indiceActual + 1) + ' / ' + fotosActuales.length;
+  }
+
+  function cambiarFoto(direccion) {
+    indiceActual = (indiceActual + direccion + fotosActuales.length) % fotosActuales.length;
+    actualizarFoto();
+  }
+
+  function cerrarModal() {
+    document.getElementById('modal').classList.remove('activo');
+    document.body.style.overflow = '';
+  }
+
+  function cerrarModalSiFuera(event) {
+    if (event.target.id === 'modal') cerrarModal();
+  }
+
+  document.addEventListener('keydown', function(e) {
+    if (!document.getElementById('modal').classList.contains('activo')) return;
+    if (e.key === 'Escape') cerrarModal();
+    if (e.key === 'ArrowLeft') cambiarFoto(-1);
+    if (e.key === 'ArrowRight') cambiarFoto(1);
+  });
+</script>
+
+</body>
+</html>
