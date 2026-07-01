@@ -302,6 +302,10 @@
     /* Gallery */
     .gallery-wrap {
       position: relative;
+    }
+
+    .gallery-main-wrap {
+      position: relative;
       overflow: hidden;
     }
 
@@ -310,10 +314,35 @@
       height: 460px;
       object-fit: cover;
       cursor: pointer;
+      display: block;
       transition: transform .35s ease;
     }
 
     .gallery-main:hover { transform: scale(1.02); }
+
+    .gallery-nav {
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      background: rgba(0,0,0,.45);
+      color: #fff;
+      border: none;
+      width: 44px;
+      height: 44px;
+      border-radius: 50%;
+      font-size: 28px;
+      line-height: 1;
+      cursor: pointer;
+      z-index: 10;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      transition: background .2s;
+      padding: 0;
+    }
+    .gallery-nav:hover { background: rgba(0,74,173,.85); }
+    .gallery-nav.prev { left: 14px; }
+    .gallery-nav.next { right: 14px; }
 
     .gallery-thumbs {
       display: flex;
@@ -974,11 +1003,15 @@
   <!-- ---- PROYECTO 1: PALM CAY ---- -->
   <div class="project-card" id="palm-cay">
     <div class="gallery-wrap">
-      <img class="gallery-main" id="pc-main"
-           src="IMAGENES/pc-1.jpg"
-           alt="Palm Cay · Modelo Angelo"
-           onclick="openModal('pc', 0)"
-           onerror="this.style.background='#E8F0FC';" />
+      <div class="gallery-main-wrap">
+        <img class="gallery-main" id="pc-main"
+             src="IMAGENES/pc-1.jpg"
+             alt="Palm Cay · Modelo Angelo"
+             onclick="openModal('pc', galIdx.pc)"
+             onerror="this.style.background='#E8F0FC';" />
+        <button class="gallery-nav prev" onclick="navGallery('pc',-1)">&#8249;</button>
+        <button class="gallery-nav next" onclick="navGallery('pc',1)">&#8250;</button>
+      </div>
       <div class="gallery-thumbs">
         <img class="gallery-thumb active" src="IMAGENES/pc-1.jpg" alt="" onclick="switchImg('pc',0,this)" onerror="this.style.display='none'" />
         <img class="gallery-thumb" src="IMAGENES/pc-2.jpg" alt="" onclick="switchImg('pc',1,this)" onerror="this.style.display='none'" />
@@ -1054,11 +1087,15 @@
   <!-- ---- PROYECTO 2: ALTAMIRA ---- -->
   <div class="project-card" id="altamira">
     <div class="gallery-wrap">
-      <img class="gallery-main" id="alt-main"
-           src="IMAGENES/alt-1.jpg"
-           alt="Altamira · Modelo Bandol"
-           onclick="openModal('alt', 0)"
-           onerror="this.style.background='#E8F0FC';" />
+      <div class="gallery-main-wrap">
+        <img class="gallery-main" id="alt-main"
+             src="IMAGENES/alt-1.jpg"
+             alt="Altamira · Modelo Bandol"
+             onclick="openModal('alt', galIdx.alt)"
+             onerror="this.style.background='#E8F0FC';" />
+        <button class="gallery-nav prev" onclick="navGallery('alt',-1)">&#8249;</button>
+        <button class="gallery-nav next" onclick="navGallery('alt',1)">&#8250;</button>
+      </div>
       <div class="gallery-thumbs">
         <img class="gallery-thumb active" src="IMAGENES/alt-1.jpg" alt="" onclick="switchImg('alt',0,this)" onerror="this.style.display='none'" />
         <img class="gallery-thumb" src="IMAGENES/alt-2.jpg" alt="" onclick="switchImg('alt',1,this)" onerror="this.style.display='none'" />
@@ -1299,27 +1336,4 @@
    class="floating-wa" target="_blank" rel="noopener" aria-label="WhatsApp">
   <svg viewBox="0 0 24 24" fill="currentColor">
     <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/>
-    <path d="M12 0C5.373 0 0 5.373 0 12c0 2.127.558 4.124 1.535 5.854L.057 23.057a.75.75 0 0 0 .887.886l5.157-1.476A11.945 11.945 0 0 0 12 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 21.75a9.727 9.727 0 0 1-5.009-1.385l-.36-.213-3.723 1.066 1.083-3.633-.234-.374A9.75 9.75 0 1 1 12 21.75z"/>
-  </svg>
-</a>
-
-<!-- Modal -->
-<div class="modal-overlay" id="modal" onclick="closeModalOnOverlay(event)">
-  <button class="modal-close" onclick="closeModal()">&times;</button>
-  <button class="modal-nav prev" onclick="navModal(-1)">&#8249;</button>
-  <img class="modal-img" id="modal-img" src="" alt="" />
-  <button class="modal-nav next" onclick="navModal(1)">&#8250;</button>
-</div>
-
-<script>
-  const galleries = {
-    pc:  ['IMAGENES/pc-1.jpg','IMAGENES/pc-2.jpg','IMAGENES/pc-3.jpg','IMAGENES/pc-4.jpg','IMAGENES/pc-5.jpg',
-          'IMAGENES/pc-6.jpg','IMAGENES/pc-7.jpg','IMAGENES/pc-8.jpg','IMAGENES/pc-9.jpg','IMAGENES/pc-10.jpg'],
-    alt: ['IMAGENES/alt-1.jpg','IMAGENES/alt-2.jpg','IMAGENES/alt-3.jpg','IMAGENES/alt-4.jpg','IMAGENES/alt-5.jpg',
-          'IMAGENES/alt-6.jpg','IMAGENES/alt-7.jpg']
-  };
-  let cur = 'pc', idx = 0;
-
-  function switchImg(g, i, el) {
-    document.getElementById(g+'-main').src = galleries[g][i];
-    docu
+    <path d="M12 0C5.373 0 0 5.373 0 12c0 2.127.558 4.124 1.535 5.854L
