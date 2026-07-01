@@ -1,0 +1,891 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<meta name="description" content="One Twenty Brickell Signature Residences — 40 pisos de residencias de lujo en el corazón de Brickell, Miami. Desarrollado por PMG. Presentado por Juan Marturell, Realtor en Florida." />
+<title>One Twenty Brickell Signature Residences · Juan Marturell, Realtor</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garant:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+
+<style>
+  /* ── VARIABLES ─────────────────────────────────────────── */
+  :root {
+    --navy:        #0D1B2A;
+    --navy-mid:    #162334;
+    --navy-light:  #1E2F42;
+    --champagne:   #C9A870;
+    --champagne-l: #E0CBA0;
+    --cream:       #F5F0E8;
+    --blanco:      #FFFFFF;
+    --texto:       rgba(255,255,255,0.88);
+    --texto-suave: rgba(255,255,255,0.58);
+    --divisor:     rgba(201,168,112,0.30);
+    --radio:       2px;
+  }
+
+  /* ── RESET ─────────────────────────────────────────────── */
+  *, *::before, *::after { margin:0; padding:0; box-sizing:border-box; }
+  html { scroll-behavior:smooth; }
+  body {
+    font-family:'Inter', -apple-system, sans-serif;
+    background: var(--navy);
+    color: var(--texto);
+    line-height:1.65;
+    font-size:16px;
+    -webkit-font-smoothing:antialiased;
+  }
+  img { max-width:100%; display:block; }
+  .contenedor { max-width:1200px; margin:0 auto; padding:0 28px; }
+
+  /* ── TIPOGRAFÍA ─────────────────────────────────────────── */
+  .serif       { font-family:'Cormorant Garant', Georgia, serif; }
+  .eyebrow {
+    display:inline-block;
+    font-size:11px; font-weight:500;
+    letter-spacing:3px; text-transform:uppercase;
+    color: var(--champagne); margin-bottom:20px;
+  }
+  .eyebrow::before, .eyebrow::after {
+    content:''; display:inline-block;
+    width:28px; height:1px;
+    background: var(--champagne); opacity:0.5;
+    vertical-align:middle;
+  }
+  .eyebrow::before { margin-right:12px; }
+  .eyebrow::after  { margin-left:12px; }
+
+  /* ── HEADER ─────────────────────────────────────────────── */
+  header {
+    position:fixed; top:0; left:0; right:0; z-index:200;
+    padding:20px 28px;
+    display:flex; align-items:center; justify-content:space-between;
+    transition: background 0.4s ease, padding 0.3s ease;
+  }
+  header.scrolled {
+    background:rgba(13,27,42,0.96);
+    backdrop-filter:blur(12px);
+    padding:14px 28px;
+    border-bottom:1px solid var(--divisor);
+  }
+  .header-logo {
+    font-family:'Cormorant Garant', Georgia, serif;
+    font-size:13px; font-weight:400; letter-spacing:3.5px;
+    text-transform:uppercase; color:var(--blanco);
+    line-height:1.4;
+  }
+  .header-logo span { display:block; font-size:9px; letter-spacing:4px; color:var(--champagne); }
+  .header-cta {
+    display:inline-flex; align-items:center; gap:8px;
+    background:transparent; border:1px solid var(--champagne);
+    color:var(--champagne); padding:10px 22px;
+    font-size:11px; font-weight:500; letter-spacing:2.5px; text-transform:uppercase;
+    text-decoration:none; transition:all 0.25s ease;
+  }
+  .header-cta:hover { background:var(--champagne); color:var(--navy); }
+
+  /* ── HERO ───────────────────────────────────────────────── */
+  .hero {
+    height:100vh; min-height:700px;
+    position:relative;
+    display:flex; align-items:center; justify-content:center;
+    overflow:hidden;
+  }
+  .hero-bg {
+    position:absolute; inset:0;
+    background-image:url('IMAGENES/ot-exterior.jpg');
+    background-size:cover; background-position:center top;
+    transform:scale(1.04);
+    transition: transform 8s ease;
+  }
+  .hero-bg.loaded { transform:scale(1); }
+  .hero-overlay {
+    position:absolute; inset:0;
+    background:linear-gradient(
+      160deg,
+      rgba(13,27,42,0.72) 0%,
+      rgba(13,27,42,0.55) 50%,
+      rgba(13,27,42,0.78) 100%
+    );
+  }
+  .hero-contenido {
+    position:relative; z-index:2;
+    text-align:center; padding:0 24px;
+    max-width:860px;
+  }
+  .hero-marca {
+    margin-bottom:36px;
+  }
+  .hero-marca-nombre {
+    font-family:'Cormorant Garant', Georgia, serif;
+    font-size:clamp(2.8rem, 6vw, 5rem);
+    font-weight:300; letter-spacing:0.12em;
+    text-transform:uppercase; color:var(--blanco);
+    line-height:1.05;
+  }
+  .hero-marca-sub {
+    font-size:clamp(0.72rem, 1.2vw, 0.85rem);
+    letter-spacing:5px; text-transform:uppercase;
+    color:var(--champagne); margin-top:6px; font-weight:400;
+  }
+  .hero-linea {
+    width:60px; height:1px;
+    background:var(--champagne); opacity:0.6;
+    margin:28px auto;
+  }
+  .hero h1 {
+    font-family:'Cormorant Garant', Georgia, serif;
+    font-size:clamp(1.5rem, 3vw, 2.2rem);
+    font-weight:300; font-style:italic;
+    color:var(--blanco); line-height:1.35;
+    margin-bottom:14px; opacity:0.92;
+  }
+  .hero-lugar {
+    font-size:11px; letter-spacing:3.5px; text-transform:uppercase;
+    color:var(--champagne-l); opacity:0.8; margin-bottom:40px;
+  }
+  .hero-botones { display:flex; gap:16px; justify-content:center; flex-wrap:wrap; }
+  .btn-champagne {
+    display:inline-flex; align-items:center; gap:10px;
+    background:var(--champagne); color:var(--navy);
+    padding:15px 32px; font-size:11.5px; font-weight:600;
+    letter-spacing:2.5px; text-transform:uppercase;
+    text-decoration:none; transition:all 0.25s ease;
+  }
+  .btn-champagne:hover { background:var(--champagne-l); }
+  .btn-outline-blanco {
+    display:inline-flex; align-items:center; gap:10px;
+    background:transparent; color:var(--blanco);
+    border:1px solid rgba(255,255,255,0.45);
+    padding:14px 30px; font-size:11px; font-weight:500;
+    letter-spacing:2.5px; text-transform:uppercase;
+    text-decoration:none; transition:all 0.25s ease;
+  }
+  .btn-outline-blanco:hover {
+    border-color:var(--champagne); color:var(--champagne);
+    background:rgba(201,168,112,0.06);
+  }
+  .hero-scroll {
+    position:absolute; bottom:32px; left:50%; transform:translateX(-50%);
+    display:flex; flex-direction:column; align-items:center; gap:8px;
+    opacity:0.5; font-size:9px; letter-spacing:3px; text-transform:uppercase;
+    color:var(--champagne);
+  }
+  .hero-scroll-line {
+    width:1px; height:40px;
+    background:linear-gradient(to bottom, var(--champagne), transparent);
+    animation: descender 2s ease infinite;
+  }
+  @keyframes descender {
+    0%,100% { opacity:0.3; transform:scaleY(0.7) translateY(-4px); }
+    50% { opacity:0.7; transform:scaleY(1) translateY(4px); }
+  }
+
+  /* ── INTRO EDITORIAL ────────────────────────────────────── */
+  .intro {
+    display:grid; grid-template-columns:1fr 1fr;
+    min-height:600px;
+  }
+  .intro-foto {
+    position:relative; overflow:hidden;
+  }
+  .intro-foto img {
+    width:100%; height:100%; object-fit:cover;
+    transition:transform 0.8s ease;
+  }
+  .intro-foto:hover img { transform:scale(1.03); }
+  .intro-texto {
+    background:var(--navy-mid);
+    display:flex; align-items:center;
+    padding:72px 64px;
+  }
+  .intro-inner { max-width:480px; }
+  .intro-inner h2 {
+    font-family:'Cormorant Garant', Georgia, serif;
+    font-size:clamp(2.2rem, 3.5vw, 3.2rem);
+    font-weight:300; line-height:1.2;
+    color:var(--blanco); margin-bottom:24px;
+  }
+  .intro-inner p {
+    font-size:0.97rem; color:var(--texto-suave);
+    line-height:1.75; margin-bottom:18px;
+  }
+
+  /* ── IMAGEN FULL WIDTH ──────────────────────────────────── */
+  .full-img {
+    position:relative; overflow:hidden;
+    height:70vh; min-height:500px;
+  }
+  .full-img img {
+    width:100%; height:100%; object-fit:cover;
+    object-position:center;
+  }
+  .full-img-overlay {
+    position:absolute; inset:0;
+    background:linear-gradient(to bottom, transparent 40%, rgba(13,27,42,0.6) 100%);
+  }
+  .full-img-caption {
+    position:absolute; bottom:40px; left:50%;
+    transform:translateX(-50%);
+    text-align:center;
+    font-size:10px; letter-spacing:3px; text-transform:uppercase;
+    color:rgba(255,255,255,0.45);
+  }
+
+  /* ── SECCIONES GENÉRICAS ────────────────────────────────── */
+  .sec { padding:100px 0; }
+  .sec-oscura { background:var(--navy); }
+  .sec-media  { background:var(--navy-mid); }
+  .sec-titulo {
+    font-family:'Cormorant Garant', Georgia, serif;
+    font-size:clamp(2rem, 3.5vw, 3rem);
+    font-weight:300; line-height:1.2;
+    color:var(--blanco); margin-bottom:20px;
+  }
+  .sec-sub {
+    font-size:0.97rem; color:var(--texto-suave); line-height:1.75;
+    max-width:600px;
+  }
+  .divisor-h { width:100%; height:1px; background:var(--divisor); margin:60px 0; }
+  .divisor-h-corto { width:60px; height:1px; background:var(--champagne); opacity:0.5; margin:20px 0 32px; }
+
+  /* ── EDIFICIO — STATS ───────────────────────────────────── */
+  .stats-grid {
+    display:grid; grid-template-columns:repeat(3,1fr);
+    border:1px solid var(--divisor);
+    margin-bottom:64px;
+  }
+  .stat-item {
+    padding:40px 32px; text-align:center; border-right:1px solid var(--divisor);
+  }
+  .stat-item:last-child { border-right:none; }
+  .stat-num {
+    font-family:'Cormorant Garant', Georgia, serif;
+    font-size:clamp(3rem, 5vw, 4.5rem); font-weight:300;
+    color:var(--champagne); line-height:1; margin-bottom:10px;
+  }
+  .stat-num sup { font-size:0.45em; vertical-align:super; }
+  .stat-label { font-size:10.5px; letter-spacing:2.5px; text-transform:uppercase; color:var(--texto-suave); }
+
+  /* ── FEATURES LIST ──────────────────────────────────────── */
+  .features-grid { display:grid; grid-template-columns:1fr 1fr; gap:0; }
+  .feature-col { padding:0 24px 0 0; }
+  .feature-col:last-child { padding-left:48px; border-left:1px solid var(--divisor); }
+  .feature-cat {
+    font-size:10px; letter-spacing:3px; text-transform:uppercase;
+    color:var(--champagne); margin-bottom:20px; margin-top:8px;
+  }
+  .feature-list { list-style:none; }
+  .feature-list li {
+    padding:10px 0;
+    border-bottom:1px solid rgba(255,255,255,0.06);
+    font-size:0.9rem; color:var(--texto-suave); line-height:1.55;
+    display:flex; align-items:flex-start; gap:12px;
+  }
+  .feature-list li::before {
+    content:''; flex-shrink:0;
+    width:5px; height:5px; border-radius:50%;
+    background:var(--champagne); opacity:0.7;
+    margin-top:8px;
+  }
+  .feature-list li:last-child { border-bottom:none; }
+
+  /* ── OFICINAS ───────────────────────────────────────────── */
+  .oficina-grid {
+    display:grid; grid-template-columns:1fr 1fr;
+    gap:0; align-items:center;
+    min-height:560px;
+  }
+  .oficina-foto { position:relative; overflow:hidden; height:560px; }
+  .oficina-foto img { width:100%; height:100%; object-fit:cover; }
+  .oficina-texto { background:var(--navy-light); padding:72px 64px; height:100%; display:flex; flex-direction:column; justify-content:center; }
+  .oficina-badge {
+    display:inline-block;
+    background:rgba(201,168,112,0.12); border:1px solid var(--divisor);
+    color:var(--champagne); font-size:10px; letter-spacing:2.5px;
+    text-transform:uppercase; padding:8px 18px; margin-bottom:28px;
+  }
+
+  /* ── RESIDENCIAS ────────────────────────────────────────── */
+  .residencias-top {
+    display:grid; grid-template-columns:1.2fr 1fr;
+    gap:0; align-items:stretch;
+  }
+  .residencias-foto { overflow:hidden; }
+  .residencias-foto img { width:100%; height:100%; object-fit:cover; }
+  .residencias-texto { background:var(--navy-mid); padding:72px 64px; display:flex; flex-direction:column; justify-content:center; }
+
+  .fotos-row {
+    display:grid; grid-template-columns:1fr 1fr; gap:3px;
+    margin-top:3px;
+  }
+  .fotos-row .foto-item { overflow:hidden; height:380px; }
+  .fotos-row .foto-item img { width:100%; height:100%; object-fit:cover; transition:transform 0.6s ease; }
+  .fotos-row .foto-item:hover img { transform:scale(1.04); }
+
+  /* ── AMENIDADES ─────────────────────────────────────────── */
+  .amenidades-grid {
+    display:grid; grid-template-columns:1fr 1.4fr;
+    gap:0; min-height:560px;
+  }
+  .amenidades-texto { background:var(--navy-mid); padding:72px 64px; display:flex; flex-direction:column; justify-content:center; }
+  .amenidades-foto { overflow:hidden; }
+  .amenidades-foto img { width:100%; height:100%; object-fit:cover; }
+
+  .amenidades-cats { display:grid; grid-template-columns:1fr; gap:28px; margin-top:32px; }
+  .amenidad-cat-titulo {
+    font-size:10px; letter-spacing:2.5px; text-transform:uppercase;
+    color:var(--champagne); margin-bottom:10px;
+  }
+
+  /* ── INVERSIÓN ──────────────────────────────────────────── */
+  .inversion-sec { background:var(--navy); padding:100px 0; }
+  .inversion-grid { display:grid; grid-template-columns:1fr 1fr; gap:80px; align-items:start; }
+
+  .precio-display {
+    margin:36px 0 20px;
+  }
+  .precio-desde {
+    font-size:11px; letter-spacing:3px; text-transform:uppercase;
+    color:var(--texto-suave); margin-bottom:8px;
+  }
+  .precio-valor {
+    font-family:'Cormorant Garant', Georgia, serif;
+    font-size:clamp(3rem, 5vw, 4rem); font-weight:300;
+    color:var(--blanco); line-height:1;
+  }
+  .precio-nota {
+    font-size:11px; color:var(--texto-suave); margin-top:10px;
+    letter-spacing:0.5px;
+  }
+  .precio-entrega {
+    margin-top:28px; padding:20px 24px;
+    border:1px solid var(--divisor);
+    display:flex; align-items:center; gap:18px;
+  }
+  .precio-entrega .ent-label { font-size:10px; letter-spacing:2.5px; text-transform:uppercase; color:var(--champagne); }
+  .precio-entrega .ent-valor {
+    font-family:'Cormorant Garant', Georgia, serif;
+    font-size:1.6rem; font-weight:300; color:var(--blanco);
+  }
+
+  /* Deposit timeline */
+  .deposit-titulo {
+    font-size:10px; letter-spacing:3px; text-transform:uppercase;
+    color:var(--champagne); margin-bottom:28px;
+  }
+  .deposit-steps { list-style:none; }
+  .deposit-step {
+    display:grid; grid-template-columns:80px 1fr;
+    align-items:center; gap:20px;
+    padding:20px 0; border-bottom:1px solid var(--divisor);
+    position:relative;
+  }
+  .deposit-step:last-child { border-bottom:none; }
+  .deposit-pct {
+    font-family:'Cormorant Garant', Georgia, serif;
+    font-size:2.8rem; font-weight:300;
+    color:var(--champagne); line-height:1; text-align:right;
+  }
+  .deposit-info {}
+  .deposit-hito {
+    font-size:0.92rem; font-weight:500; color:var(--blanco);
+    margin-bottom:2px;
+  }
+  .deposit-fecha {
+    font-size:11px; letter-spacing:1.5px; text-transform:uppercase;
+    color:var(--texto-suave);
+  }
+  .deposit-nota {
+    font-size:10.5px; color:var(--texto-suave); margin-top:24px;
+    line-height:1.6;
+  }
+
+  .team-grid { display:grid; grid-template-columns:1fr 1fr 1fr; gap:0; margin-top:48px; padding-top:40px; border-top:1px solid var(--divisor); }
+  .team-item { padding:0 24px 0 0; }
+  .team-item + .team-item { padding-left:24px; border-left:1px solid var(--divisor); }
+  .team-label { font-size:9px; letter-spacing:3px; text-transform:uppercase; color:var(--champagne); margin-bottom:6px; }
+  .team-nombre { font-size:0.9rem; color:var(--texto-suave); line-height:1.4; }
+
+  /* ── CTA ZOOM ───────────────────────────────────────────── */
+  .zoom-sec {
+    background:linear-gradient(135deg, var(--navy-mid) 0%, var(--navy-light) 100%);
+    padding:100px 0;
+    position:relative; overflow:hidden;
+  }
+  .zoom-sec::before {
+    content:''; position:absolute;
+    top:-200px; right:-200px;
+    width:500px; height:500px;
+    background:radial-gradient(circle, rgba(201,168,112,0.07) 0%, transparent 70%);
+    border-radius:50%;
+  }
+  .zoom-inner { max-width:720px; margin:0 auto; text-align:center; position:relative; }
+  .zoom-inner h2 {
+    font-family:'Cormorant Garant', Georgia, serif;
+    font-size:clamp(2rem, 3.5vw, 3rem);
+    font-weight:300; color:var(--blanco); margin-bottom:20px; line-height:1.25;
+  }
+  .zoom-inner p { color:var(--texto-suave); font-size:0.98rem; line-height:1.75; margin-bottom:40px; }
+  .zoom-botones { display:flex; gap:16px; justify-content:center; flex-wrap:wrap; }
+
+  /* ── WHATSAPP FLOTANTE ──────────────────────────────────── */
+  .wa-flotante {
+    position:fixed; bottom:24px; right:24px; z-index:300;
+    width:56px; height:56px;
+    background:#25D366; border-radius:50%;
+    display:flex; align-items:center; justify-content:center;
+    box-shadow:0 8px 24px rgba(37,211,102,0.38);
+    text-decoration:none; transition:transform 0.25s ease;
+  }
+  .wa-flotante:hover { transform:scale(1.1); }
+  .wa-flotante svg { width:28px; height:28px; fill:#fff; }
+
+  /* ── FOOTER ─────────────────────────────────────────────── */
+  footer {
+    background:#070E16;
+    border-top:1px solid var(--divisor);
+    padding:56px 0 28px;
+  }
+  .footer-inner {
+    display:grid; grid-template-columns:1.4fr 1fr 1fr;
+    gap:48px; margin-bottom:40px;
+  }
+  .footer-agente {}
+  .footer-agente-nombre {
+    font-family:'Cormorant Garant', Georgia, serif;
+    font-size:1.5rem; font-weight:400;
+    color:var(--blanco); margin-bottom:4px;
+  }
+  .footer-agente-titulo {
+    font-size:10px; letter-spacing:2.5px; text-transform:uppercase;
+    color:var(--champagne); margin-bottom:20px;
+  }
+  .footer-agente p {
+    font-size:0.875rem; color:var(--texto-suave); line-height:1.7;
+  }
+  .footer-col h4 {
+    font-size:10px; letter-spacing:3px; text-transform:uppercase;
+    color:var(--champagne); margin-bottom:18px;
+  }
+  .footer-col a {
+    display:block; color:var(--texto-suave); text-decoration:none;
+    font-size:0.875rem; padding:5px 0; transition:color 0.2s;
+  }
+  .footer-col a:hover { color:var(--blanco); }
+  .footer-col p { font-size:0.875rem; color:var(--texto-suave); line-height:1.7; }
+
+  .footer-bottom {
+    border-top:1px solid rgba(255,255,255,0.06);
+    padding-top:24px;
+  }
+  .footer-disclaimer {
+    font-size:0.72rem; color:rgba(255,255,255,0.28);
+    line-height:1.8; max-width:960px;
+  }
+  .footer-copy {
+    font-size:0.75rem; color:rgba(255,255,255,0.3);
+    margin-top:14px;
+  }
+
+  /* ── RESPONSIVE ─────────────────────────────────────────── */
+  @media (max-width:960px) {
+    .intro, .oficina-grid, .residencias-top, .amenidades-grid { grid-template-columns:1fr; }
+    .intro-texto, .oficina-texto, .residencias-texto, .amenidades-texto { padding:56px 36px; }
+    .oficina-foto, .amenidades-foto, .residencias-foto { height:380px; }
+    .inversion-grid { grid-template-columns:1fr; gap:48px; }
+    .stats-grid, .features-grid, .footer-inner { grid-template-columns:1fr; }
+    .stat-item { border-right:none; border-bottom:1px solid var(--divisor); }
+    .stat-item:last-child { border-bottom:none; }
+    .feature-col { padding:0; }
+    .feature-col:last-child { padding-left:0; border-left:none; border-top:1px solid var(--divisor); padding-top:28px; margin-top:28px; }
+    .team-grid { grid-template-columns:1fr; }
+    .team-item { padding:14px 0; border-left:none !important; border-bottom:1px solid var(--divisor); }
+    .team-item:last-child { border-bottom:none; }
+    .fotos-row .foto-item { height:260px; }
+    header { padding:16px 20px; }
+    .hero-botones { flex-direction:column; align-items:center; }
+  }
+  @media (max-width:600px) {
+    .sec { padding:70px 0; }
+    .fotos-row { grid-template-columns:1fr; }
+    .fotos-row .foto-item { height:300px; }
+    .zoom-botones { flex-direction:column; align-items:stretch; }
+    .btn-champagne, .btn-outline-blanco { justify-content:center; }
+    .deposit-step { grid-template-columns:60px 1fr; }
+    .deposit-pct { font-size:2rem; }
+    .header-cta { display:none; }
+  }
+</style>
+</head>
+<body>
+
+<!-- WHATSAPP FLOTANTE -->
+<a href="https://wa.me/14077316247?text=Hola%20Juan%2C%20me%20interesa%20conocer%20m%C3%A1s%20sobre%20One%20Twenty%20Brickell%20Signature%20Residences." class="wa-flotante" aria-label="Contactar por WhatsApp">
+  <svg viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+</a>
+
+<!-- HEADER -->
+<header id="header">
+  <div class="header-logo">
+    One Twenty
+    <span>Brickell Signature Residences</span>
+  </div>
+  <a href="https://wa.me/14077316247?text=Hola%20Juan%2C%20me%20interesa%20conocer%20m%C3%A1s%20sobre%20One%20Twenty%20Brickell%20Signature%20Residences." class="header-cta">
+    Hablar con Juan
+  </a>
+</header>
+
+<!-- HERO -->
+<section class="hero">
+  <div class="hero-bg" id="hero-bg"></div>
+  <div class="hero-overlay"></div>
+  <div class="hero-contenido">
+    <div class="hero-marca">
+      <div class="hero-marca-nombre">One Twenty</div>
+      <div class="hero-marca-sub">Brickell Residences &nbsp;·&nbsp; Signature</div>
+    </div>
+    <div class="hero-linea"></div>
+    <h1>Una vida única en perfecto equilibrio</h1>
+    <p class="hero-lugar">Brickell · Miami, Florida &nbsp;·&nbsp; Entrega Junio 2028</p>
+    <div class="hero-botones">
+      <a href="https://wa.me/14077316247?text=Hola%20Juan%2C%20me%20interesa%20conocer%20m%C3%A1s%20sobre%20One%20Twenty%20Brickell%20Signature%20Residences." class="btn-champagne">
+        <svg width="17" height="17" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+        Solicitar información
+      </a>
+      <a href="https://wa.me/14077316247?text=Hola%20Juan%2C%20quisiera%20agendar%20una%20reuni%C3%B3n%20privada%20por%20Zoom%20para%20conocer%20m%C3%A1s%20sobre%20One%20Twenty%20Brickell%20Signature%20Residences." class="btn-outline-blanco">
+        Agendar reunión por Zoom
+      </a>
+    </div>
+  </div>
+  <div class="hero-scroll">
+    <div class="hero-scroll-line"></div>
+    Descubrir
+  </div>
+</section>
+
+<!-- INTRO EDITORIAL -->
+<section class="intro">
+  <div class="intro-foto">
+    <img src="IMAGENES/ot-aerial.jpg" alt="Vista aérea de Brickell, Miami" loading="lazy" />
+  </div>
+  <div class="intro-texto">
+    <div class="intro-inner">
+      <div class="eyebrow">Brickell · Miami</div>
+      <h2 class="serif">La evolución natural de una visión cosmopolita.</h2>
+      <div class="divisor-h-corto"></div>
+      <p>One Twenty Brickell Signature Residences presenta una interpretación del equilibrio y la vida moderna impulsada por el diseño. Cada residencia integra de manera fluida la productividad con la comodidad del hogar.</p>
+      <p>Amenidades de bienestar cuidadosamente seleccionadas y sofisticados espacios de encuentro crean un estilo de vida intencional y refinado.</p>
+    </div>
+  </div>
+</section>
+
+<!-- IMAGEN FULL WIDTH — BALCÓN -->
+<div class="full-img">
+  <img src="IMAGENES/ot-balcony.jpg" alt="Terraza privada con vistas a Brickell" loading="lazy" />
+  <div class="full-img-overlay"></div>
+  <div class="full-img-caption">Representación conceptual del artista</div>
+</div>
+
+<!-- EL EDIFICIO -->
+<section class="sec sec-oscura">
+  <div class="contenedor">
+    <div class="eyebrow">Características del edificio</div>
+    <h2 class="sec-titulo">Arquitectura de referencia<br/>en el corazón de Brickell.</h2>
+    <div class="divisor-h-corto"></div>
+
+    <div class="stats-grid">
+      <div class="stat-item">
+        <div class="stat-num">40</div>
+        <div class="stat-label">Pisos de altura</div>
+      </div>
+      <div class="stat-item">
+        <div class="stat-num">467</div>
+        <div class="stat-label">Residencias de lujo</div>
+      </div>
+      <div class="stat-item">
+        <div class="stat-num">50<sup>K</sup></div>
+        <div class="stat-label">Pies cuadrados de amenidades</div>
+      </div>
+    </div>
+
+    <div class="features-grid">
+      <div class="feature-col">
+        <div class="feature-cat">Detalles del edificio</div>
+        <ul class="feature-list">
+          <li>Torre de 40 pisos localizada en Brickell, Miami</li>
+          <li>Diseñada por la firma reconocida mundialmente Sieger Suarez Architects</li>
+          <li>467 lujosas residencias con oficinas privadas e independientes</li>
+          <li>Vistas de Brickell, Downtown Miami y Biscayne Bay</li>
+          <li>Santuario centrado en piscina estilo resort y áreas de descanso</li>
+          <li>One Twenty Signature Club — lounge privado exclusivo para propietarios</li>
+          <li>Flexibilidad para alquileres a corto plazo</li>
+          <li>Centro Fitness One Twenty Brickell Signature</li>
+          <li>Lobby residencial moderno con alto nivel de diseño</li>
+          <li>Obras de arte personalizadas</li>
+          <li>Última tecnología para edificios inteligentes</li>
+        </ul>
+      </div>
+      <div class="feature-col">
+        <div class="feature-cat">Detalles de las residencias</div>
+        <ul class="feature-list">
+          <li>Estudio, 1-, 2- y 3 habitaciones completamente amuebladas y terminadas</li>
+          <li>Opciones de pisos cuidadosamente seleccionadas para adaptarse a su estilo</li>
+          <li>Clósets empotrados en habitaciones principales con estantes y gavetas</li>
+          <li>Lavadora y secadora de primera línea empotrada</li>
+          <li>Tecnología de hogar inteligente</li>
+          <li>Paquete de iluminación contemporáneo en todas las unidades</li>
+          <li>Cableado para comunicaciones de alta velocidad pre-instalado</li>
+        </ul>
+        <div class="feature-cat" style="margin-top:24px;">Cocinas y baños</div>
+        <ul class="feature-list">
+          <li>Cocinas italianas completamente integradas de moderno diseño</li>
+          <li>Electrodomésticos de marcas lujosas incluyendo Miele</li>
+          <li>Baños con gabinetes italianos y accesorios WaterWorks</li>
+          <li>Topes de baño personalizados y pisos terminados</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- BALANCEANDO VIDA Y TRABAJO -->
+<section class="sec" style="padding:0;">
+  <div class="oficina-grid">
+    <div class="oficina-foto">
+      <img src="IMAGENES/ot-office.jpg" alt="Suite de oficina privada" loading="lazy" />
+    </div>
+    <div class="oficina-texto">
+      <div class="oficina-badge">Diferenciador exclusivo</div>
+      <div class="eyebrow">Vida &amp; Trabajo</div>
+      <h2 class="serif sec-titulo">Balanceando la<br/>vida y el trabajo.</h2>
+      <div class="divisor-h-corto"></div>
+      <p class="sec-sub" style="margin-bottom:28px;">Las oficinas privadas en One Twenty Brickell Signature Residences redefinen el balance a través de la máxima conveniencia. Completas con elevadores independientes, acceso a salas de conferencias totalmente equipadas y recepcionista.</p>
+      <div class="feature-cat">Detalles de las oficinas</div>
+      <ul class="feature-list">
+        <li>Título de propiedad independiente</li>
+        <li>Wi-Fi incluido</li>
+        <li>Diseño con paredes de vidrio</li>
+        <li>Escritorio con silla ejecutiva</li>
+        <li>2 sillas para invitados</li>
+        <li>Pre-cableado para televisión</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<!-- LAS RESIDENCIAS -->
+<section class="sec" style="padding:0;">
+  <div class="residencias-top">
+    <div class="residencias-foto">
+      <img src="IMAGENES/ot-living.jpg" alt="Sala de estar con vista a Miami" loading="lazy" />
+    </div>
+    <div class="residencias-texto">
+      <div class="eyebrow">Interiores</div>
+      <h2 class="serif sec-titulo">Enfocados en un<br/>alto nivel de vida.</h2>
+      <div class="divisor-h-corto"></div>
+      <p class="sec-sub">Cada residencia es un manifiesto del diseño contemporáneo y la funcionalidad. Ventanas de piso a techo, materiales de primera y tecnología integrada crean espacios que superan las expectativas.</p>
+    </div>
+  </div>
+  <div class="fotos-row">
+    <div class="foto-item">
+      <img src="IMAGENES/ot-dining.jpg" alt="Comedor con vistas" loading="lazy" />
+    </div>
+    <div class="foto-item">
+      <img src="IMAGENES/ot-kitchen.jpg" alt="Cocina italiana de diseño" loading="lazy" />
+    </div>
+  </div>
+</section>
+
+<!-- AMENIDADES -->
+<section class="sec" style="padding:0;">
+  <div class="amenidades-grid">
+    <div class="amenidades-texto">
+      <div class="eyebrow">Bienestar</div>
+      <h2 class="serif sec-titulo">Más de 50,000 pies<br/>de experiencia.</h2>
+      <div class="divisor-h-corto"></div>
+      <p class="sec-sub" style="margin-bottom:36px;">El bienestar es un estilo de vida en One Twenty Signature Brickell. Amenidades diseñadas para enriquecer cada dimensión de su vida.</p>
+
+      <div class="amenidades-cats">
+        <div>
+          <div class="amenidad-cat-titulo">One Twenty Signature Club</div>
+          <ul class="feature-list">
+            <li>Lounge privado exclusivo para propietarios</li>
+            <li>Diseño relajado y elegante con ambiente social dinámico</li>
+            <li>Piscina estilo resort con áreas de descanso elegantemente diseñadas</li>
+          </ul>
+        </div>
+        <div>
+          <div class="amenidad-cat-titulo">Centro Fitness &amp; Spa</div>
+          <ul class="feature-list">
+            <li>Spa de Bienestar: vapor terapéutico, sauna y piscinas de inmersión</li>
+            <li>Salas de tratamiento privadas</li>
+            <li>Estudio de Fitness de Última Generación con equipos de alta tecnología</li>
+            <li>Estudio de movimiento revitalizante</li>
+            <li>Bar de Café y Jugos</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <div class="amenidades-foto">
+      <img src="IMAGENES/ot-fitness.jpg" alt="Centro de fitness One Twenty" loading="lazy" />
+    </div>
+  </div>
+</section>
+
+<!-- INVERSIÓN -->
+<section class="inversion-sec" id="inversion">
+  <div class="contenedor">
+    <div class="eyebrow">Oportunidad de inversión</div>
+    <div class="inversion-grid">
+
+      <!-- Precio y entrega -->
+      <div>
+        <h2 class="serif sec-titulo">Una inversión en el<br/>corazón de Miami.</h2>
+        <div class="divisor-h-corto"></div>
+        <p class="sec-sub" style="max-width:100%;">One Twenty Brickell Signature Residences combina apreciación patrimonial, renta a corto plazo y calidad de vida en uno de los mercados más dinámicos de los Estados Unidos.</p>
+
+        <div class="precio-display">
+          <div class="precio-desde">Precios desde</div>
+          <div class="precio-valor">$600,000</div>
+          <div class="precio-nota">* Precios aproximados sujetos a disponibilidad y cambios sin previo aviso.</div>
+        </div>
+
+        <div class="precio-entrega">
+          <div>
+            <div class="ent-label">Entrega estimada</div>
+            <div class="ent-valor">Junio 2028</div>
+          </div>
+        </div>
+
+        <div class="divisor-h" style="margin:36px 0;"></div>
+
+        <div class="team-grid">
+          <div class="team-item">
+            <div class="team-label">Desarrollador</div>
+            <div class="team-nombre">Property Markets Group (PMG)</div>
+          </div>
+          <div class="team-item">
+            <div class="team-label">Arquitecto</div>
+            <div class="team-nombre">Sieger Suarez Architects</div>
+          </div>
+          <div class="team-item">
+            <div class="team-label">Ventas</div>
+            <div class="team-nombre">PMG Residential</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Estructura de depósitos -->
+      <div>
+        <div class="deposit-titulo">Estructura de depósitos</div>
+        <ul class="deposit-steps">
+          <li class="deposit-step">
+            <div class="deposit-pct">10%</div>
+            <div class="deposit-info">
+              <div class="deposit-hito">Al firmar el contrato</div>
+              <div class="deposit-fecha">Reserva inmediata</div>
+            </div>
+          </li>
+          <li class="deposit-step">
+            <div class="deposit-pct">10%</div>
+            <div class="deposit-info">
+              <div class="deposit-hito">Segundo depósito</div>
+              <div class="deposit-fecha">Diciembre 2026</div>
+            </div>
+          </li>
+          <li class="deposit-step">
+            <div class="deposit-pct">10%</div>
+            <div class="deposit-info">
+              <div class="deposit-hito">Top-Off</div>
+              <div class="deposit-fecha">Junio 2027</div>
+            </div>
+          </li>
+          <li class="deposit-step">
+            <div class="deposit-pct">70%</div>
+            <div class="deposit-info">
+              <div class="deposit-hito">Al cierre</div>
+              <div class="deposit-fecha">Junio 2028 (estimado)</div>
+            </div>
+          </li>
+        </ul>
+        <p class="deposit-nota">Solo un 30% de inversión inicial distribuida en tres etapas antes del cierre. Financiamiento disponible para compradores calificados. Consulte disponibilidad y condiciones.</p>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- CTA ZOOM -->
+<section class="zoom-sec">
+  <div class="contenedor">
+    <div class="zoom-inner">
+      <div class="eyebrow">Presentación privada</div>
+      <h2 class="serif">Solicita tu reunión<br/>personal por Zoom.</h2>
+      <div class="divisor-h-corto" style="margin:24px auto;"></div>
+      <p>Agenda una sesión privada con presentación oficial del desarrollador. Resuelve todas tus preguntas, conoce los planos disponibles y da el primer paso hacia tu inversión en Brickell — sin compromiso, en español.</p>
+      <div class="zoom-botones">
+        <a href="https://wa.me/14077316247?text=Hola%20Juan%2C%20quisiera%20agendar%20una%20reuni%C3%B3n%20privada%20por%20Zoom%20sobre%20One%20Twenty%20Brickell%20Signature%20Residences." class="btn-champagne">
+          Agendar reunión por Zoom
+        </a>
+        <a href="https://wa.me/14077316247?text=Hola%20Juan%2C%20me%20interesa%20conocer%20m%C3%A1s%20sobre%20One%20Twenty%20Brickell%20Signature%20Residences." class="btn-outline-blanco">
+          <svg width="17" height="17" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+          Escribir por WhatsApp
+        </a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="contenedor">
+    <div class="footer-inner">
+      <div class="footer-agente">
+        <div class="footer-agente-nombre">Juan Marturell</div>
+        <div class="footer-agente-titulo">Realtor · Florida</div>
+        <p>Especializado en propiedades de inversión y nueva construcción para clientes hispanos e inversionistas latinoamericanos.</p>
+      </div>
+      <div class="footer-col">
+        <h4>Contacto</h4>
+        <p>+1 (407) 731 6247<br/>Orlando, Florida</p>
+        <a href="https://marturellrealtor.com" target="_blank" rel="noopener">marturellrealtor.com</a>
+        <a href="https://instagram.com/realtorjuanmarturell" target="_blank" rel="noopener">@realtorjuanmarturell</a>
+      </div>
+      <div class="footer-col">
+        <h4>Licencia</h4>
+        <p>Agent Trust Realty Corp<br/>Lic. SL3466778<br/>4113 Hunter's Park Ln<br/>Orlando, FL 32837</p>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <p class="footer-disclaimer">
+        Las representaciones orales no pueden ser consideradas como declaraciones correctas del desarrollador. Para representaciones correctas, haga referencia a este material y a los documentos requeridos por la Sección 718.503 de los Estatutos de Florida. Este proyecto ha sido registrado en el Estado de Florida y en ningún otro estado. Esto no es una oferta de venta ni una solicitud de oferta de compra en estados donde dicha oferta o solicitud no pueda realizarse. Los precios, metrajes y disponibilidad están sujetos a cambios en cualquier momento sin previo aviso. Todas las imágenes son representaciones conceptuales del artista y no deben interpretarse como representaciones de las unidades finales. La información de precios, planos y especificaciones está sujeta a cambios sin previo aviso. Equal Housing Opportunity.
+      </p>
+      <p class="footer-copy">&copy; 2026 Juan Marturell · Realtor en Florida · Agent Trust Realty Corp · Lic. SL3466778</p>
+    </div>
+  </div>
+</footer>
+
+<script>
+  // Header scroll effect
+  const header = document.getElementById('header');
+  window.addEventListener('scroll', () => {
+    header.classList.toggle('scrolled', window.scrollY > 60);
+  });
+
+  // Hero background lazy load with zoom effect
+  window.addEventListener('load', () => {
+    const bg = document.getElementById('hero-bg');
+    const img = new Image();
+    img.onload = () => {
+      bg.style.backgroundImage = "url('IMAGENES/ot-exterior.jpg')";
+      setTimeout(() => bg.classList.add('loaded'), 100);
+    };
+    img.src = 'ot-exterior.jpg';
+  });
+</script>
+
+</body>
+</html>
