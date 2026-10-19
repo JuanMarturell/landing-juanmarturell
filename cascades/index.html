@@ -1,19 +1,6 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-  <!-- Meta Pixel -->
-<script>
-!function(f,b,e,v,n,t,s){if(f.fbq)return;n=f.fbq=function(){n.callMethod?
-n.callMethod.apply(n,arguments):n.queue.push(arguments)};if(!f._fbq)f._fbq=n;
-n.push=n;n.loaded=!0;n.version='2.0';n.queue=[];t=b.createElement(e);t.async=!0;
-t.src=v;s=b.getElementsByTagName(e)[0];s.parentNode.insertBefore(t,s)}(window,
-document,'script','https://connect.facebook.net/en_US/fbevents.js');
-fbq('init', '969098145160367');
-fbq('track', 'PageView');
-</script>
-<noscript><img height="1" width="1" style="display:none"
-src="https://www.facebook.com/tr?id=969098145160367&ev=PageView&noscript=1"/></noscript>
-<!-- End Meta Pixel -->
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
@@ -114,6 +101,23 @@ src="https://www.facebook.com/tr?id=969098145160367&ev=PageView&noscript=1"/></n
     margin-bottom: 36px; line-height: 1.65;
     max-width: 640px; margin-left: auto; margin-right: auto;
   }
+  .hero-hook {
+    max-width: 640px; margin: 0 auto 26px;
+    background: var(--azul-claro);
+    border-left: 4px solid var(--azul);
+    border-radius: 12px;
+    padding: 18px 24px;
+    text-align: left;
+    box-shadow: var(--sombra-suave);
+  }
+  .hero-hook-lead {
+    font-size: 1.08rem; font-weight: 700; color: var(--texto);
+    line-height: 1.45; margin-bottom: 6px;
+  }
+  .hero-hook-text {
+    font-size: 0.98rem; color: var(--texto-suave); line-height: 1.55;
+  }
+  .hero-hook-text strong { color: var(--azul); font-weight: 700; }
   .cta-botones { display: flex; gap: 14px; justify-content: center; flex-wrap: wrap; }
   .btn-primario {
     display: inline-flex; align-items: center; gap: 10px;
@@ -584,6 +588,10 @@ src="https://www.facebook.com/tr?id=969098145160367&ev=PageView&noscript=1"/></n
   <div class="contenedor hero-inner">
     <div class="eyebrow">Davenport · Polk County · Florida</div>
     <h1>Bienvenido a <span>Cascades</span></h1>
+    <div class="hero-hook">
+      <p class="hero-hook-lead">El nuevo desarrollo comercial en Davenport está impulsando la demanda de vivienda.</p>
+      <p class="hero-hook-text">Estas son algunas de las propiedades disponibles hoy — <strong>escríbeme antes de que suban de precio.</strong></p>
+    </div>
     <p class="hero-sub">
       Una comunidad de nueva construcción en el corazón de Davenport, Florida.
       Casas de 3 a 5 habitaciones con club house, piscina, gimnasio y tecnología smart home,
